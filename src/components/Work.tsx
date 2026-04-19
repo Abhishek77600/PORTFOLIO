@@ -20,7 +20,8 @@ const Work = () => {
         const parentWidth = box[0].parentElement!.getBoundingClientRect().width;
         let padding: number =
           parseInt(window.getComputedStyle(box[0]).padding) / 2;
-        translateX = rect.width * box.length - (rectLeft + parentWidth) + padding;
+        // Ensure all boxes are scrollable by adding extra margin
+        translateX = rect.width * box.length - (rectLeft + parentWidth) + padding + 100;
       }
 
       setTranslateX();
