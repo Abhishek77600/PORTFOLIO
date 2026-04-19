@@ -21,7 +21,7 @@ const Work = () => {
         let padding: number =
           parseInt(window.getComputedStyle(box[0]).padding) / 2;
         // Ensure all boxes are scrollable by adding extra margin
-        translateX = rect.width * box.length - (rectLeft + parentWidth) + padding + 100;
+        translateX = rect.width * box.length - (rectLeft + parentWidth) + padding + 200;
       }
 
       setTranslateX();
@@ -34,7 +34,7 @@ const Work = () => {
             start: "top top",
             end: `+=${translateX}`,
             scrub: 0.3,
-            pin: false,
+            pin: true,
             invalidateOnRefresh: true,
             id: "work",
           },
