@@ -68,7 +68,7 @@ const Work = () => {
               <h4>Tools and Technologies</h4>
               <p>Python, Pandas, NumPy, Scikit-learn, NLTK, CountVectorizer, Cosine Similarity</p>
             </div>
-            <WorkImage image="/images/MovieRecommendationsystem.png" alt="Movie Recommendation System" />
+            <WorkImage image="/images/MovieRecommendationsystem.png" alt="Movie Recommendation System" link="https://github.com/Abhishek77600/MovieRecommendation_System.git" />
           </div>
           <div className="work-box">
             <div className="work-info">
@@ -82,7 +82,7 @@ const Work = () => {
               <h4>Tools and Technologies</h4>
               <p>Python, YOLOv8, Ultralytics, OpenCV, K-means, Machine Learning, Deep Learning</p>
             </div>
-            <WorkImage image="/images/Football.png" alt="Football Analysis System" />
+            <WorkImage image="/images/Football.png" alt="Football Analysis System" link="https://github.com/Abhishek77600/Football_Analysis_OpenCV.git" />
           </div>
           <div className="work-box">
             <div className="work-info">
@@ -96,7 +96,7 @@ const Work = () => {
               <h4>Tools and Technologies</h4>
               <p>PostgreSQL, SQL, Excel, Data Cleaning, Data Analysis</p>
             </div>
-            <WorkImage image="/images/Zepto.jpg" alt="Zepto Product Analysis" />
+            <WorkImage image="/images/Zepto.jpg" alt="Zepto Product Analysis" link="https://github.com/Abhishek77600/Zepto_SQL_Project.git" />
           </div>
           <div className="work-box">
             <div className="work-info">
@@ -110,7 +110,7 @@ const Work = () => {
               <h4>Tools and Technologies</h4>
               <p>Python, NLP, Transformer models, Speech-to-Text, Flask/FastAPI, React</p>
             </div>
-            <WorkImage image="/images/Hirepro.png" alt="HirePro Automatic Interview System" />
+            <WorkImage image="/images/Hirepro.png" alt="HirePro Automatic Interview System" link="https://github.com/Abhishek77600/HirePro-Automatic-Interviewer-System.git" />
           </div>
           <div className="work-box">
             <div className="work-info">
@@ -124,7 +124,7 @@ const Work = () => {
               <h4>Tools and Technologies</h4>
               <p>Python, Pandas, NumPy, PostgreSQL/SQL, Matplotlib/Seaborn, Tableau/PowerBI</p>
             </div>
-            <WorkImage image="/images/ecommerce.png" alt="E-commerce Analytics" />
+            <WorkImage image="/images/ecommerce.png" alt="E-commerce Analytics" link="https://github.com/Abhishek77600/End-to-End-E-commerce-Analytics-From-Raw-Data-to-Business-Insights.git" />
           </div>
         </div>
       </div>
