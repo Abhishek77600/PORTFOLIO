@@ -30,15 +30,16 @@
 @media only screen and (min-width: 1025px) {
   .about-section {
     width: var(--cWidth);
-    justify-content: right;
+    justify-content: flex-end;
     max-width: 1920px;
     padding: 80px 0;
   }
   .about-me {
-    width: 50%;
+    width: 40%;
     padding-right: 8px;
-    /* shift the block further left from the right edge */
-    margin-right: 32%;
+    margin-left: auto;
+    margin-right: 0;
+    max-width: 560px;
   }
   .para {
     font-size: 1.05rem;
