@@ -1,0 +1,130 @@
+.header {
+  display: flex;
+  max-width: var(--cMaxWidth);
+  width: var(--cWidth);
+  justify-content: space-between;
+  padding: 20px 0px;
+  margin-bottom: -100px;
+  box-sizing: border-box;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+  z-index: 9999;
+}
+.header ul {
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  column-gap: 40px;
+  row-gap: 8px;
+  align-items: end;
+}
+.header ul li {
+  margin-left: 0px;
+  letter-spacing: 1px;
+  color: #ccc;
+  font-weight: 600;
+  cursor: pointer;
+}
+.navbar-connect {
+  position: absolute;
+  display: none;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 15px;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+.navbar-title {
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.2px;
+}
+
+.folded-hands {
+  display: inline-block;
+  margin-left: 8px;
+  transform-origin: 50% 50%;
+  animation: foldedWave 1.6s ease-in-out infinite;
+}
+
+@keyframes foldedWave {
+  0% { transform: translateY(0) scale(1); }
+  20% { transform: translateY(-6px) scale(1.06); }
+  40% { transform: translateY(0) scale(1); }
+  60% { transform: translateY(-3px) scale(1.03); }
+  100% { transform: translateY(0) scale(1); }
+}
+
+/* Title entrance animation */
+.site-title {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: content-box;
+  width: 0ch;
+  /* font and size */
+  font-family: inherit;
+  font-size: 20px;
+  border-right: 2px solid var(--accentColor, #7c4dff);
+  letter-spacing: 0.6px;
+  color: var(--textColor, #fff);
+  /* typing animation: steps should match character length (26) */
+  animation: typing 2.6s steps(26) 0.2s forwards, blinkCaret 0.7s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0ch; }
+  to { width: 26ch; }
+}
+
+@keyframes blinkCaret {
+  from, to { border-right-color: transparent; }
+  50% { border-right-color: var(--accentColor); }
+}
+
+/* larger font on wider screens */
+@media only screen and (min-width: 1200px) {
+  .site-title { font-size: 24px; }
+}
+@media only screen and (min-width: 500px) {
+  .header {
+    padding: 20px 0px;
+  }
+  .header ul {
+    flex-direction: row;
+    align-items: center;
+    font-size: 14px;
+  }
+  .header ul li {
+    color: #eae5ec;
+  }
+  .navbar-title {
+    font-size: 16px;
+  }
+}
+@media only screen and (min-width: 900px) {
+  .navbar-connect {
+    display: block;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .header {
+    padding: 35px 0px;
+  }
+  .header ul {
+    column-gap: 80px;
+    font-size: 16px;
+  }
+  .navbar-connect {
+    font-size: 16px;
+  }
+  .navbar-title {
+    font-size: 18px;
+  }
+}

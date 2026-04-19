@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Resume Viewer</title>
+    <style>
+      html,body{height:100%;margin:0;background:#0b0b0c;color:#fff;font-family:Helvetica,Arial,sans-serif}
+      .viewer{position:fixed;inset:0;display:flex;align-items:center;justify-content:center}
+      iframe{width:100%;height:100%;border:0;background:#fff}
+      #overlay{position:fixed;inset:0;z-index:9999;user-select:none}
+      .notice{position:fixed;right:12px;top:12px;background:rgba(0,0,0,0.5);padding:8px 10px;border-radius:6px;font-size:13px}
+    </style>
+  </head>
+  <body>
+    <div id="overlay" title="Copy disabled"></div>
+    <div class="notice">Viewer mode — copy/print disabled</div>
+    <div class="viewer">
+      <iframe src="/images/MariResume.pdf#toolbar=0&navpanes=0&scrollbar=0" allow="autoplay"></iframe>
+    </div>
+    <script>
+      // Prevent context menu, copy, print shortcuts and selection
+      document.addEventListener('contextmenu', e => e.preventDefault());
+      document.addEventListener('copy', e => e.preventDefault());
+      document.addEventListener('keydown', function(e){
+        if ((e.ctrlKey||e.metaKey) && (e.key==='s' || e.key==='p' || e.key==='u' || e.key==='S' || e.key==='P' || e.key==='U')) e.preventDefault();
+        if (e.key==='PrintScreen') e.preventDefault();
+      });
+      // allow pointer events so the embedded PDF can be scrolled
+      document.getElementById('overlay').style.pointerEvents = 'none';
+    </script>
+  </body>
+</html>

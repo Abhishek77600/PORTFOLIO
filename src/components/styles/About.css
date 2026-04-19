@@ -1,0 +1,46 @@
+.about-section {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  position: relative;
+  opacity: 1;
+  height: auto;
+  width: var(--cWidth);
+  margin: 0 auto 40px auto;
+  padding: 40px 0;
+}
+.about-me {
+  padding: 0 20px;
+  max-width: 900px;
+}
+.title {
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  color: var(--accentColor);
+  margin: 0 0 12px 0;
+}
+.para {
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--textColor, #ddd);
+  margin: 0;
+}
+
+@media only screen and (min-width: 1025px) {
+  .about-section {
+    width: var(--cWidth);
+    justify-content: right;
+    max-width: 1920px;
+    padding: 80px 0;
+  }
+  .about-me {
+    width: 50%;
+    padding-right: 8px;
+    /* shift the block further left from the right edge */
+    margin-right: 32%;
+  }
+  .para {
+    font-size: 1.05rem;
+  }
+}
